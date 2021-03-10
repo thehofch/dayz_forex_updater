@@ -68,7 +68,7 @@ end
 
 def update_trader_file(new_rate, db, config)
   puts "Updating trader file"
-  File.open('C:\Users\hofch\Desktop\Trader\z_Forex.txt', 'w') { |f|
+  File.open(config['forex_trader_file_path'], 'w') { |f|
     f.write("<Trader> #{config['trader_name']}\n<Category> Currency\n#{config['currency_name']}, *, *, #{new_rate[:new_sell_val]}, #{new_rate[:new_buy_val]}\n<FileEnd>")
     puts "Trader file updated"
   }
