@@ -136,11 +136,12 @@ func changeValue(increase bool) int {
 }
 
 func writeNewData() {
-	text := fmt.Sprintf("<Trader> %s\n<Category> Currency\n%s, *, 1, %d, %d\n<FileEnd>",
+	text := fmt.Sprintf("<Trader> %s\n<Category> Currency\n%s, *, 1, %d, %d%s\n<FileEnd>",
 		config["trader_name"],
 		config["currency_name"],
 		int(newSellValue),
 		int(newBuyValue),
+		config["next_open_file"],
 	)
 	dataBytes := []byte(text)
 	ioutil.WriteFile(fmt.Sprintf("%v", config["forex_trader_file_path"]), dataBytes, 0)

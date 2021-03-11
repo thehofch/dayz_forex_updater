@@ -4,5 +4,6 @@
     "currency_name": "Bitcoin",
     "chanse_of_increasing": 50,
     "min_threshold": 1,
-    "max_threshold": 10
+    "max_threshold": 10,
+    "next_open_file": "\n<OpenFile> z_BlackMarket.txt"
 }
