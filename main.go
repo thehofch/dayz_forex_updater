@@ -52,7 +52,7 @@ func readExistingData() {
 
 	initialText := string(file)
 
-	r, err := regexp.Compile(`(\d+),\s+(\d+)`)
+	r, err := regexp.Compile(`1,\s+(\d+),\s+(\d+)`)
 
 	if err != nil {
 		fmt.Printf("There is a problem with your regexp.\n")
@@ -136,7 +136,7 @@ func changeValue(increase bool) int {
 }
 
 func writeNewData() {
-	text := fmt.Sprintf("<Trader> %s\n<Category> Currency\n%s, *, *, %d, %d\n<FileEnd>",
+	text := fmt.Sprintf("<Trader> %s\n<Category> Currency\n%s, *, 1, %d, %d\n<FileEnd>",
 		config["trader_name"],
 		config["currency_name"],
 		int(newSellValue),
