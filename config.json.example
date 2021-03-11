@@ -1,11 +1,8 @@
 {
-    "forex_trader_file_path": "",
-    "db_file_path": "",
+    "forex_trader_file_path": "C:\\server\\forex_trader",
     "trader_name": "Forex trader",
     "currency_name": "Bitcoin",
-    "default_currency_rate": 100000,
-    "min_sell_value": 75,
-    "max_sell_value": 125,
-    "min_buy_discounter": 5,
-    "max_buy_discounter": 10
+    "chanse_of_increasing": 50,
+    "min_threshold": 1,
+    "max_threshold": 10
 }
